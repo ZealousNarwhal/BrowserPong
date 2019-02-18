@@ -151,6 +151,7 @@ var ResetBoard = function()
     ballObj.x = ((canvas.width / 2) - 10);
     ballObj.y = ((canvas.height / 2) - 10);
 
+    ballObj.velocityX = 3;
     ballObj.velocityY = 1;
 };
 
