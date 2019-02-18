@@ -187,12 +187,12 @@ var UpdatePlayer = function()
 {
     if(isPlayerMovingUp)
     {
-        playerObj.y -= 3;
+        playerObj.y = Math.max((playerObj.y - 3), 0);
     }
 
     else if(isPlayerMovingDown)
     {
-        playerObj.y += 3;
+        playerObj.y = Math.min((playerObj.y + 3), (canvas.height - playerObj.h));
     }
 };
 
@@ -207,12 +207,12 @@ var UpdateOpponent = function()
     {
         if(isOpponentMovingUp)
         {
-            opponentObj.y -= 3;
+            opponentObj.y = Math.max((opponentObj.y - 3), 0);
         }
 
         else if(isOpponentMovingDown)
         {
-            opponentObj.y += 3;
+            opponentObj.y = Math.min((opponentObj.y + 3), (canvas.height - opponentObj.h));
         }
     }
 };
